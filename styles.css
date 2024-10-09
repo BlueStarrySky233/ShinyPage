@@ -1,0 +1,94 @@
+@import url("./MiSans-Bold.ttf");
+
+/* General reset for padding and margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #111;
+    color: white;
+    font-family: "MiSans", sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align the container to the top */
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.portrait {
+    flex: 1;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shiny-text {
+    font-size: 10rem; /* Increase the text size */
+    position: absolute;
+    top: 50px; /* Place the text at the top */
+    left: 50%;
+    transform: translateX(-50%); /* Center the text horizontally */
+    z-index: 10;
+    text-align: center;
+    white-space: nowrap; /* Ensure the text stays in one line */
+}
+
+.shiny-text h1 {
+    font-size: inherit; /* Inherit the large size from the parent */
+    font-weight: bold;
+    background: linear-gradient(90deg, #fff, #f8e112, #fff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shiny 2s linear infinite;
+}
+
+@keyframes shiny {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+.spinning-image {
+    position: absolute;
+    bottom: 200px; /* Adjust as needed to move it slightly from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.spinning-image img {
+    width: 300px; /* Adjust the size of the spinning image */
+    height: 300px;
+    animation: spin 20s linear infinite; /* Spin the image */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
