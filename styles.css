@@ -1,4 +1,9 @@
-@import url("./MiSans-Bold.ttf");
+@font-face {
+    font-family: "MiSans";
+    src: url("./MiSans-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
 
 /* General reset for padding and margins */
 * {
